@@ -1,59 +1,39 @@
-# 30-Day Microsoft Security Challenge
+# MyDFIR 30-Day Microsoft Challenge
 
-The **30-Day Microsoft Security Challenge** is a hands-on learning project built around a Microsoft 365 E5 environment.  
-The focus is to explore, configure, and practice with Microsoft’s security stack in a lab-driven way.
-
----
-
-## 🔐 Tools in Scope
-
-- **Microsoft Sentinel** – SIEM/SOAR for centralized logging, detection, and response.  
-- **Defender for Endpoint** – Endpoint Detection & Response (EDR) across devices.  
-- **Defender for Office 365** – Advanced protection for email and collaboration.  
-- **Microsoft Entra ID** – Identity management and access control.  
-- **Intune** – Endpoint compliance, device configuration, and policy management.  
+This repo documents my 30-day journey through Microsoft 365 E5, Azure, Sentinel, Defender XDR, and Intune.  
+Goal: Build hands-on skills and a portfolio for SOC roles (investigations, analysis, incident response).
 
 ---
 
-## 📅 Challenge Overview
+## Progress Log
 
-- **Daily Labs:** Each day introduces a focused lab or project step, building on the previous day.  
-- **Hands-On Approach:** You will configure, test, and simulate attacks in your own tenant.  
-- **End-to-End Coverage:** The challenge touches identity, endpoints, email, SIEM integration, and automated response.  
-- **Capstone:** By Day 30, you’ll have a functioning security lab with detections, playbooks, and investigation workflows.  
+**Day 1**
+- MS 365 E5 Trial – Done  
+- Azure $200 Credit – Done  
+- Billing Alerts – Done  
+- Goal: Practical experience with cloud security and SOC workflows.
 
----
+**Days 2–4**
+- Created Azure VM, secured RDP.  
+- Built Sentinel workspace.  
+- Loaded training data, started KQL.  
 
-## 🎯 Learning Objectives
+**Day 4 (Detail)**
+- Wrote query on `EmailEvents` to check SPF/DKIM/DMARC.  
+- Learned how to parse `AuthenticationDetails`.  
 
-By completing this challenge, you will:
+**Day 6**
+- Installed Defender XDR.  
+- Waiting for data connector to appear (still troubleshooting).  
 
-- Stand up and manage a Microsoft 365 E5 trial tenant.  
-- Onboard endpoints and apply baseline protections.  
-- Configure email and identity security features.  
-- Connect data sources into Microsoft Sentinel and create detections.  
-- Practice investigation and response workflows.  
-- Automate SOC processes using playbooks.  
-
----
-
-## 🛠️ Requirements
-
-- An active **Microsoft 365 E5 Trial tenant**.  
-- A test machine or VM for onboarding into Defender and Intune.  
-- Basic understanding of Windows, cloud identity, and security concepts.  
+**Day 7**
+- Investigation: 18k failed logins within one second.  
+- Hosts: SOC-FW-RDP, SHIR-Hive, SHIR-SAP.  
+- Recommendation: Restrict RDP, enforce MFA/VPN, enable account lockouts, add alerts.
 
 ---
 
-## 📖 How to Use This Repo
-
-- **Day 01 → Day 30 folders** – Track notes, screenshots, and configs.  
-- **Queries folder** – Save KQL queries and detection rules.  
-- **Playbooks folder** – Store Logic App and Sentinel playbooks.  
-- **Docs folder** – Write-ups, lessons learned, and project summaries.  
-
----
-
-## 🏁 Next Step
-
-Make sure your trial tenant is active and accessible, then start **Day 1: Tenant Setup & Baseline Configuration**.  
+## Next Steps
+- Add more KQL queries
+- Continue daily logs
+- Build out small investigations
